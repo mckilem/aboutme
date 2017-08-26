@@ -7,17 +7,18 @@ from django.shortcuts import render, render_to_response
 from mainapp.classes import personal_core
 
 
+me = personal_core.ClPersonalInfo('', '')
+me.init_defaults()
+
 def mainpage(request):
-    me = personal_core.CLPersonalInfo('','')
-    me.init_defaults()
     return render_to_response("index.html",
                               {'name': me.name,
                                'birthdate': me.date_of_birth,
                                'skills': me.skills,
-                               'hobbies': me.hobbies })
+                               'hobbies': me.hobbies})
 
 def studypage(request):
-    return render_to_response("study.html")
+    return render_to_response("study.html", {'studies': me.studies})
 
 def workpage(request):
-    return render_to_response("work.html")
+    return render_to_response("work.html", {'works': me.works})

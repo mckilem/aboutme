@@ -1,3 +1,6 @@
 .idea
 aboutme\__pycache__
 mainapp\__pycache__
+aboutme/__pycache__/
+mainapp/__pycache__/
+mainapp/classes/__pycache__/
