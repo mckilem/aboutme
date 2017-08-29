@@ -1,0 +1,44 @@
+{#Любая страница проекта должна наследоваться от данной страницы, или от ее потомков#}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            Небольшой сайт обо мне
+        {% endblock %}
+    </title>
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock %}
+</head>
+
+<body>
+    {% block header %}
+    <header class="header">
+        <div class="header__logo">
+            <img  class="header__logo__avatar" src="{% static 'images/avatar.jpg' %}" alt="аватар" title="Я">
+        </div>
+        <div class="header__welcomephrase">
+            Просто сайт, ничего интересного
+        </div>
+        <div class="header__menu">
+            <ul class="header__menu__list">
+                <li><a href="index">Обо мне</a></li>
+                <li><a href="study">Учился</a></li>
+                <li><a href="work">Работал</a></li>
+            </ul>
+        </div>
+    </header>    
+    {% endblock %}
+    {% block content %}
+    <content>
+        
+    </content>
+    {% endblock %}
+    {% block footer %}
+    <footer class="footer">2017</footer>
+    {% endblock %}
+</body>
+</html>
