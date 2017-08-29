@@ -19,3 +19,4 @@ class Hobby(models.Model):
 
 class Skill(models.Model):
     text = models.TextField(verbose_name='Skill description')
+

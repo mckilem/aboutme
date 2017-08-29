@@ -25,8 +25,8 @@
             <ul>
                 {% if skills %}
                     {% for skill in skills %}
-                        <li>{{ skill.text }}</li>
-                    {% endfor %}            
+                        <li>{{ skill }}</li>
+                    {% endfor %}
                 {% else %}
                     Судя по всему список моих навыков не доехал до вашего браузера :(
                 {% endif %}
@@ -38,8 +38,8 @@
             <ul>
                 {% if hobbies %}
                     {% for hobbie in hobbies %}
-                        <li>{{ hobbie.text }}</li>
-                    {% endfor %}            
+                        <li>{{ hobbie }}</li>
+                    {% endfor %}
                 {% else %}
                     Ошибка 404. Хобби не найдены :(
                 {% endif %}                     

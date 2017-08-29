@@ -21,9 +21,8 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', mainpage),
-    url(r'^index$', mainpage),
-    url(r'^study$', studypage),
-    url(r'^work$', workpage),
+    url(r'^admin/', admin.site.urls, name='admin'),
+    url(r'^$', mainpage, name='home_page'),
+    url(r'^study$', studypage, name='study_page'),
+    url(r'^work$', workpage, name='work_page'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
