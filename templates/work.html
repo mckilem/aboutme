@@ -10,11 +10,11 @@
                     {% if works %}
                         {% for work in works %}
                             <td class = "work__content__innerblock_place">
-                                <a href={{ work.site }}>
-                                    <img src="{% static '' %}{{ work.image_path }}" alt= "{{ work.organization }}" title= "{{ work.organization }}">
+                                <a href="/work/{{ work.id }}">
+                                    <img src="{% static '' %}{{ work.organization.image_path }}" alt= "{{ work.organization.name }}" title= "{{ work.organization.name }}">
                                 </a>
                                 <p>
-                                    <a href="{{ work.site }}">{{ work.organization }}</a>
+                                    <a href="/work/{{ work.id }}">{{ work.organization.name }}</a>
                                 </p>
                             </td>
                         {% endfor %}

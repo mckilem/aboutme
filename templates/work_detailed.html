@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<content>
+    <div class="work-detailed__content">
+        <h2>{{ work.organization.name }}</h2>
+        <div class="work-detailed__content__innerblock">
+            <img src="{% static '' %}{{ work.organization.image_path }}"
+                 class="work-detailed__content__innerblock_photo"
+                 alt= "{{ work.organization.name }}"
+                 title= "{{ work.organization.name }}">
+            <ul class = "work-detailed__content__list">
+                <li>
+                    <a href="{{ work.organization.site }}"> Сайт организации </a>
+                </li>
+                <li>
+                    Должность: {{ work.position }}
+                </li>
+                <li>
+                    Обязанности: {{work.duties}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</content>
+{% endblock %}
+<script>
+function dosmth() {
+	alert("!!!!!!!");
+}
+</script>

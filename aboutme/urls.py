@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^$', mainpage, name='home_page'),
     url(r'^study$', studypage, name='study_page'),
     url(r'^work$', workpage, name='work_page'),
+    url(r'^work/(?P<id>\d+)$', workpage_detailed, name='work_page_detailed'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

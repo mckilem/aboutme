@@ -10,11 +10,11 @@
                     {% if studies %}
                         {% for study in studies %}
                             <td class = "study__content__innerblock_place">
-                                <a href={{ study.site }}>
-                                    <img src="{% static '' %}{{ study.image_path }}" alt= "{{ study.organization }}" title= "{{ study.organization }}">
+                                <a href="{{ study.site }}">
+                                    <img src="{% static '' %}{{ study.image_path }}" alt= "{{ study.name }}" title= "{{ study.name }}">
                                 </a>
                                 <p>
-                                    <a href="{{ study.site }}">{{ study.organization }}</a>
+                                    <a href="{{ study.site }}">{{ study.name }}</a>
                                 </p>
                             </td>
                         {% endfor %}
